@@ -6,10 +6,10 @@ import eslintConfigPrettier from 'eslint-config-prettier';
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   { languageOptions: { globals: globals.node } },
-  eslintConfigPrettier,
   {
     ...pluginJs.configs.recommended,
     ...playwright.configs['flat/recommended'],
+    ...eslintConfigPrettier,
     rules: {
       ...pluginJs.configs.recommended.rules,
       'no-unused-vars': 'error',
