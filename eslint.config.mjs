@@ -8,7 +8,6 @@ export default [
   { languageOptions: { globals: globals.node } },
   pluginJs.configs.recommended,
   playwright.configs['flat/recommended'],
-  eslintConfigPrettier,
   {
     rules: {
       'no-unused-vars': 'error',
@@ -27,4 +26,6 @@ export default [
       '**/playwright-report/**',
     ],
   },
+  //Prettier must be last so its disables take precedence
+  eslintConfigPrettier,
 ];
